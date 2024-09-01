@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Gestion de compte - Se connecter</title>
+    <link rel="stylesheet" href="../CSS/connexion.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <nav>
+
+            <a href="accueil.html">Accueil</a>
+            <a href="form_connexion.html" style="background-color: dodgerblue; color: black; padding: 4px;">Se connecter</a>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <h1>Se connecter</h1>
+
+        <form action="../PHP/connexion.php">
+
+            <div>
+                <label for="nom">Nom</label>
+                <input type="text" id="username" placeholder="nom">
+            </div>
+
+            
+            <div>
+                <label for="mdp">Mot de passe</label>
+                <input type="text" id="mdp" placeholder="************">
+            </div>
+
+            <input id="btn_connexion" type="submit" value="Connexion">
+
+        </form>
+
+        <p>Vous n'avez pas encore de compte? <a href="form_nouveau_compte.html">Cliquez ici</a>.</p>
+        <p>Vous avez oublié votre mot de passe? <a href="form_nouveau_mdp.html">Cliquez ici</a>.</p>
+
+    </main>
+
+    <footer>
+        <p>&copy; Site web développé par Maxyme Bonvent.</p>
+    </footer>    
+
+</body>
+</html>
