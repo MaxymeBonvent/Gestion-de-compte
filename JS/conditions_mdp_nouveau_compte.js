@@ -3,7 +3,7 @@ let invalide = "rgb(180, 0, 0)";
 let valide = "rgb(0, 160, 0)";
 
 // VARIABLES DU NOM
-let input_nom = document.getElementById("nom");
+let input_nom = document.getElementById("username");
 let longueur_nom = document.getElementById("longueur_nom");
 let nomValide = false;
 

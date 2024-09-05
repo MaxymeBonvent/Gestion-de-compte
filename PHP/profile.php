@@ -25,7 +25,30 @@
 
     <main>
 
-        <h1>Pseudo</h1>
+        <?php
+            // Début de la session
+            session_start();
+
+            // Affichage de toutes les erreurs
+            error_reporting(E_ALL);
+            ini_set('display_errors', 1);
+            
+            // Si le nom de l'utilisateur existe
+            if(isset($_SESSION["username"]))
+            {
+                // Le placer dans une variable
+                $username = $_SESSION["username"];
+
+                echo "<h1>".$username."</h1>";
+            }
+
+            // Si le nom de l'utilisateur n'existe pas
+            else
+            {
+                // Afficher un message d'erreur
+                echo "<p>Erreur : aucun nom d'utilisateur.</p>";
+            }
+        ?>
 
         <div>
 
@@ -34,23 +57,6 @@
             <a id="lien_suppr_compte" href="confirm_suppr_compte.php">Supprimer le compte</a>
 
         </div>
-
-        <?php
-            error_reporting(E_ALL);
-            ini_set('display_errors', 1);
-
-            session_start();
-            
-            if($_SESSION["username"] == "admin")
-            {
-               echo "<h1>Fonctions admin</h1>";
-            }
-
-            else
-            {
-                echo "<p>Vous n'êtes pas admin.</p>";
-            }
-        ?>
 
     </main>
 

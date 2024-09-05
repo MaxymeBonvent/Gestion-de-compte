@@ -30,10 +30,6 @@
 
         <p>Bienvenu sur ce projet de gestionnaire de comptes. Ici, vous pouvez créer votre compte, modifier votre mot de passe, en demander un nouveau, ou supprimer votre compte.</p>
 
-        <?php
-            include_once("connexion_db.php");
-        ?>
-
     </main>
 
     <footer>

@@ -29,15 +29,17 @@
 
         <form action="inscription.php" method="POST">
 
+            <!-- NOM -->
             <div>
-                <label for="nom">Nom</label>
-                <input type="text" name="nom" id="nom" placeholder="nom" oninput="LongueurNom()">
+                <label for="username">Nom</label>
+                <input type="text" name="username" id="username" placeholder="nom" oninput="LongueurNom()">
             </div>
 
             <p><span id="longueur_nom">0</span>/20</p>
 
             <p id="dispo_nom">Nom &#40;in&#41;disponible</p>
 
+            <!-- MAIL -->
             <div>
                 <label for="mail">Mail</label>
                 <input type="email" name="mail" id="mail" placeholder="une.adresse@hotmail.com" oninput="LongueurMail()">
@@ -47,6 +49,7 @@
 
             <p id="dispo_mail">Mail &#40;in&#41;disponible</p>
 
+            <!-- MOT DE PASSE -->
             <div>
                 <label for="mdp">Mot de passe</label>
                 <input type="password" name="mdp" id="mdp" placeholder="************" oninput="ConditionsMDP()">
@@ -62,6 +65,7 @@
                 <li id="txt_spec">1 caractère spécial &#40;sauf &&#41;</li>
             </ul>
 
+            <!-- RÉPÉTITION DU MOT DE PASSE -->
             <div>
                 <label for="répé_mdp">Répéter mdp</label>
                 <input type="password" name="répé_mdp" id="répé_mdp" placeholder="************" oninput="TestToutesConditions()">
@@ -69,6 +73,7 @@
 
             <p id="compar_mdp">Les mots de passe sont identiques/différents</p>
 
+            <!-- VALIDATION -->
             <input type="submit" name="btn_nouveau_compte" id="btn_nouveau_compte" value="Créer un compte">
 
         </form>
