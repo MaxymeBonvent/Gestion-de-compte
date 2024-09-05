@@ -5,7 +5,7 @@ body{
     flex-direction: column;
 }
 
-nav, main{
+nav, main, main div{
     border: 2px solid black;
 }
 
@@ -31,7 +31,7 @@ header, footer{
     background-color: darkcyan;
 }
 
-a, footer{
+nav a, footer{
     color: white;
 }
 
@@ -45,6 +45,17 @@ main{
     align-items: center;
 
     text-align: center;
+}
+
+main div{
+    width: 30%;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+main a{
+    color: black;
 }
 
 /* VERSION TRÈS PETITE */

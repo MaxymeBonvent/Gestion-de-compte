@@ -45,7 +45,6 @@ main{
     align-items: center;
 
     text-align: center;
-    height: 400px;
 }
 
 form{
@@ -73,12 +72,12 @@ input{
     border: transparent;
 }
 
-#btn_connexion{
+#btn_connexion, #btn_demande_mdp{
     background-color: rgb(230, 230, 230);
     margin-top: 20px;
 }
 
-#btn_connexion:hover{
+#btn_connexion:hover, #btn_demande_mdp:hover{
     cursor: pointer;
 
     background-color: black;

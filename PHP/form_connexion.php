@@ -16,8 +16,8 @@
 
         <nav>
 
-            <a href="accueil.html">Accueil</a>
-            <a href="form_connexion.html" style="background-color: dodgerblue; color: black; padding: 4px;">Se connecter</a>
+            <a href="accueil.php">Accueil</a>
+            <a href="form_connexion.php" style="background-color: dodgerblue; color: black; padding: 4px;">Se connecter</a>
 
         </nav>
 
@@ -44,8 +44,8 @@
 
         </form>
 
-        <p>Vous n'avez pas encore de compte? <a href="form_nouveau_compte.html">Cliquez ici</a>.</p>
-        <p>Vous avez oublié votre mot de passe? <a href="form_nouveau_mdp.html">Cliquez ici</a>.</p>
+        <p>Vous n'avez pas encore de compte? <a href="form_nouveau_compte.php">Cliquez ici</a>.</p>
+        <p>Vous avez oublié votre mot de passe? <a href="form_demande_mdp.php">Cliquez ici</a>.</p>
 
     </main>
 

@@ -16,8 +16,9 @@
 
         <nav>
 
-            <a href="accueil.html" style="background-color: dodgerblue; color: black; padding: 4px;">Accueil</a>
-            <a href="form_connexion.html">Se connecter</a>
+            <a href="accueil.php" style="background-color: dodgerblue; color: black; padding: 4px;">Accueil</a>
+            <a href="form_connexion.php">Se connecter</a>
+            <a href="profile.php">Profile</a>
 
         </nav>
 
@@ -28,6 +29,10 @@
         <h1>Accueil</h1>
 
         <p>Bienvenu sur ce projet de gestionnaire de comptes. Ici, vous pouvez créer votre compte, modifier votre mot de passe, en demander un nouveau, ou supprimer votre compte.</p>
+
+        <?php
+            include_once("connexion_db.php");
+        ?>
 
     </main>
 
