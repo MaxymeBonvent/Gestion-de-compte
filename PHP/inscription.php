@@ -116,7 +116,7 @@
             pg_query($db, "BEGIN");
 
             // Cryptage du mot de passe
-            $mdp_crypt = password_hash($répé_mdp, PASSWORD_DEFAULT);
+            $mdp_crypt = password_hash($mdp, PASSWORD_DEFAULT);
 
             // Préparation à l'insertion du compte dans la DB
             $prepa_insertion_compte = "INSERT INTO utilisateurs (username, mail, crypt_pwd) VALUES ($1, $2, $3)";

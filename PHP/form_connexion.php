@@ -27,17 +27,17 @@
 
         <h1>Se connecter</h1>
 
-        <form action="../PHP/connexion.php">
+        <form action="connexion_utilisateur.php" method="POST">
 
             <div>
-                <label for="nom">Nom</label>
-                <input type="text" id="username" placeholder="nom">
+                <label for="username">Nom</label>
+                <input type="text" name="username" id="username" placeholder="nom" minlength="1" maxlength="20" autocomplete="off">
             </div>
 
             
             <div>
                 <label for="mdp">Mot de passe</label>
-                <input type="text" id="mdp" placeholder="************">
+                <input type="text" name="mdp" id="mdp" placeholder="************" minlength="12" maxlength="100">
             </div>
 
             <input id="btn_connexion" type="submit" value="Connexion">
