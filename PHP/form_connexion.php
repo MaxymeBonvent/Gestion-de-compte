@@ -33,11 +33,10 @@
                 <label for="username">Nom</label>
                 <input type="text" name="username" id="username" placeholder="nom" minlength="1" maxlength="20" autocomplete="off">
             </div>
-
             
             <div>
                 <label for="mdp">Mot de passe</label>
-                <input type="text" name="mdp" id="mdp" placeholder="************" minlength="12" maxlength="100">
+                <input type="password" name="mdp" id="mdp" placeholder="************" minlength="12" maxlength="100" autocomplete="off">
             </div>
 
             <input id="btn_connexion" type="submit" value="Connexion">

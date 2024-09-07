@@ -35,7 +35,7 @@ let chiffrePrésent = false;
 let txt_chiffre = document.getElementById("txt_chiffre");
 
 // Spécial
-let array_spé = ["~", "#", "'", "{", "}", "(", ")", "[", "]", "-", "|", "`", "_", "/", "\\", "\"", "^", "@", "°", "=", "-", "*", ".", "+", "€", "$", "£", "¤", "%", "!", "?", ",", ":"];
+let array_spé = ["~", "#", "'", "{", "}", "(", ")", "[", "]", "-", "|", "`", "_", "/", "\\", "\"", "\$", "^", "@", "=", "-", "*", ".", "+", "%", "!", "?", ",", ":"];
 let spécialPrésent = false;
 let txt_spec = document.getElementById("txt_spec");
 
