@@ -6,7 +6,7 @@
   if(!$db)
   {
     // On affiche un message d'erreur
-    echo "<p>Échec de la connexion à la base de données.</p>";
+    echo "<body style='background-color: black;'><p style='color: $couleur_txt; text-align: center; font-size: 20px;'>Échec de la connexion à la DB.</p></body>";
 
     // Fin du script
     exit;

@@ -12,10 +12,10 @@
     // --- VARIABLES DU FORMULAIRE --- //
 
     // Variable du nouveau compte
-    $username = $_POST["username"];
-    $mail = $_POST["mail"];
-    $mdp = $_POST["mdp"];
-    $répé_mdp = $_POST["répé_mdp"];
+    $username = trim($_POST["username"]);
+    $mail = trim($_POST["mail"]);
+    $mdp = trim($_POST["mdp"]);
+    $répé_mdp = trim($_POST["répé_mdp"]);
 
     // --- ERREURS NOM --- //
 
@@ -148,7 +148,7 @@
             pg_query($db, "BEGIN");
 
             // Cryptage du mot de passe
-            $mdp_crypt = password_hash($mdp, PASSWORD_BCRYPT);
+            $mdp_crypt = password_hash($mdp, PASSWORD_DEFAULT);
 
             // Requête d'insertion du compte dans la DB
             $insertion_compte = "INSERT INTO utilisateurs (username, mail, crypt_pwd) VALUES ($1, $2, $3)";

@@ -28,7 +28,11 @@
 
         <h1>Accueil</h1>
 
-        <p>Bienvenu sur ce projet de gestionnaire de comptes. Ici, vous pouvez créer votre compte, modifier votre mot de passe, en demander un nouveau, ou supprimer votre compte.</p>
+        <p>Bienvenu sur ce projet de gestionnaire de comptes. Ici, vous pouvez créer votre compte, vous déconnecter, vous reconnecter, modifier votre mot de passe, en demander un nouveau, ou supprimer votre compte.</p>
+
+        <?php
+            // echo phpinfo();
+        ?> 
 
     </main>
 

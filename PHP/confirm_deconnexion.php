@@ -25,14 +25,20 @@
 
     <main>
 
-        <?php
-            error_reporting(E_ALL);
-            ini_set('display_errors', 1);
+    <?php
+        // Début de session
+        session_start();
 
-            session_destroy();
-            
-            echo "<p>Vous êtes bien déconnecté.</p>";
-        ?>
+        // Affichage de toutes les erreurs
+        error_reporting(E_ALL);
+        ini_set("display_errors", 1);
+
+        // Fin de session
+        session_destroy();
+
+        // Message de confirmation
+        echo "<p>Vous êtes bien déconnecté.</p>";
+    ?>
 
     </main>
 

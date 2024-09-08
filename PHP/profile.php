@@ -39,6 +39,7 @@
                 // Le placer dans une variable
                 $username = $_SESSION["username"];
 
+                // Affichage du nom de l'utilisateur à l'écran
                 echo "<h1>".$username."</h1>";
             }
 
@@ -47,6 +48,9 @@
             {
                 // Afficher un message d'erreur
                 echo "<p>Erreur : aucun nom d'utilisateur.</p>";
+
+                // Fin du script
+                exit;
             }
         ?>
 
