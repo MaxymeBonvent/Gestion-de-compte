@@ -31,12 +31,12 @@
 
             <div>
                 <label for="username">Nom</label>
-                <input type="text" name="username" id="username" placeholder="nom" minlength="1" maxlength="20" autocomplete="off">
+                <input type="text" name="username" id="username" placeholder="nom" minlength="1" maxlength="20" autocomplete="off" required>
             </div>
             
             <div>
                 <label for="mdp">Mot de passe</label>
-                <input type="password" name="mdp" id="mdp" placeholder="************" minlength="12" maxlength="100" autocomplete="off">
+                <input type="password" name="mdp" id="mdp" placeholder="************" minlength="12" maxlength="100" autocomplete="off" required>
             </div>
 
             <input id="btn_connexion" type="submit" value="Connexion">

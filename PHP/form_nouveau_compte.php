@@ -32,7 +32,7 @@
             <!-- NOM -->
             <div>
                 <label for="username">Nom</label>
-                <input type="text" name="username" id="username" placeholder="nom" minlength="1" maxlength="20" oninput="LongueurNom()">
+                <input type="text" name="username" id="username" placeholder="nom" minlength="1" maxlength="20" autocomplete="off" required oninput="LongueurNom()">
             </div>
 
             <p><span id="longueur_nom">0</span>/20</p>
@@ -42,7 +42,7 @@
             <!-- MAIL -->
             <div>
                 <label for="mail">Mail</label>
-                <input type="email" name="mail" id="mail" placeholder="une.adresse@hotmail.com" minlength="14" maxlength="80" oninput="LongueurMail()">
+                <input type="email" name="mail" id="mail" placeholder="une.adresse@hotmail.com" minlength="14" maxlength="80" autocomplete="off" required oninput="LongueurMail()">
             </div>
 
             <p><span id="longueur_mail">0</span>/80</p>
@@ -52,7 +52,7 @@
             <!-- MOT DE PASSE -->
             <div>
                 <label for="mdp">Mot de passe</label>
-                <input type="password" name="mdp" id="mdp" placeholder="************" minlength="12" maxlength="100" oninput="ConditionsMDP()">
+                <input type="password" name="mdp" id="mdp" placeholder="************" minlength="12" maxlength="100" autocomplete="off" required oninput="ConditionsMDP()">
             </div>
 
             <p>Votre mot de passe doit contenir au moins :</p>
@@ -68,7 +68,7 @@
             <!-- RÉPÉTITION DU MOT DE PASSE -->
             <div>
                 <label for="répé_mdp">Répéter mdp</label>
-                <input type="password" name="répé_mdp" id="répé_mdp" placeholder="************" minlength="12" maxlength="100" oninput="TestToutesConditions()">
+                <input type="password" name="répé_mdp" id="répé_mdp" placeholder="************" minlength="12" maxlength="100" autocomplete="off" required oninput="TestToutesConditions()">
             </div>
 
             <p id="compar_mdp">Les mots de passe sont identiques/différents</p>
