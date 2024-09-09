@@ -78,12 +78,6 @@
     // --- FORMULAIRE VALIDE --- //
     if(!empty($username) && strlen($username) < 21 && !empty($mdp) && strlen($mdp) < 101)
     {
-        // BREAK TEST
-        // echo "<pre style='color: $couleur_txt; text-align: center; font-size: 20px;'>\$_POST : \n";
-        // echo $_POST["username"]."\n";
-        // echo $_POST["mdp"]."</pre>\n";
-        // exit;
-
         // Connexion à la DB
         include_once("connexion_db.php");
         
@@ -106,28 +100,20 @@
         // Si l'exécution renvoi au moins une rangée
         if($rangee_mdp_nom = pg_fetch_assoc($exec_mdp_nom))
         {
-            // On place le mdp crypté de la DB dans une variable
-            $stored_hash = $rangee_mdp_nom["crypt_pwd"];
-
-            // BREAK TEST
-            echo "<pre style='color: $couleur_txt; text-align: center; font-size: 20px;'>";
-
-            echo "MDP formulaire : " . $mdp . "\n";
-            echo "MDP DB : " . $stored_hash . "\n";
-            echo "password_verify(\$mdp, \$stored_hash) : ";
-            echo password_verify($mdp, $stored_hash) ? 'true' : 'false' . "\n";
-
-            echo "</pre>";
-
-            // Fin du script
-            exit;
-
+            // On place le mdp crypté et trimé de la DB dans une variable
+            $mdp_db_crypt = trim($rangee_mdp_nom["crypt_pwd"]);
 
             // Si le cryptage du mdp du formulaire correspond au mdp crypté de la DB 
-            if(password_verify($mdp, $stored_hash))
+            if(password_verify($mdp, $mdp_db_crypt))
             {
                 // Message de réussite de la connexion
-                echo "<p style='color: $couleur_txt; text-align: center; font-size: 20px;'>Réussite de la connexion.</p>";
+                // echo "<p style='color: $couleur_txt; text-align: center; font-size: 20px;'>Les MDP du formulaire et de la DB correspondent. Vous allez être redirigé vers votre page de profile.</p>";
+
+                // On assigne à la varibale globale SESSION["username"] la valeur du nom du formulaire
+                $_SESSION["username"] = $username;
+
+                // Redirection
+                header("Location: profile.php");
 
                 // Fin du script
                 exit;
@@ -137,7 +123,7 @@
             else
             {
                 // Message d'échec de la connexion
-                echo "<p style='color: $couleur_txt; text-align: center; font-size: 20px;'>Échec de la connexion, le mot de passe du formulaire et celui de la DB ne correspondent pas.</p>";
+                echo "<p style='color: $couleur_txt; text-align: center; font-size: 20px;'>Échec de la connexion, les MDP du formulaire et de la DB ne correspondent pas.</p>";
 
                 // Fin du script
                 exit;

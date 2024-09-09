@@ -37,8 +37,6 @@
 
             <p><span id="longueur_nom">0</span>/20</p>
 
-            <p id="dispo_nom">Nom &#40;in&#41;disponible</p>
-
             <!-- MAIL -->
             <div>
                 <label for="mail">Mail</label>
@@ -46,8 +44,6 @@
             </div>
 
             <p><span id="longueur_mail">0</span>/80</p>
-
-            <p id="dispo_mail">Mail &#40;in&#41;disponible</p>
 
             <!-- MOT DE PASSE -->
             <div>

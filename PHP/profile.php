@@ -33,14 +33,23 @@
             error_reporting(E_ALL);
             ini_set('display_errors', 1);
             
-            // Si le nom de l'utilisateur existe
+            // Si la variable globale SESSION["username"] existe
             if(isset($_SESSION["username"]))
             {
-                // Le placer dans une variable
-                $username = $_SESSION["username"];
+                // Placer sa valeur dans une variable
+                $username = htmlspecialchars($_SESSION["username"]);
 
                 // Affichage du nom de l'utilisateur à l'écran
                 echo "<h1>".$username."</h1>";
+
+                // Affichage des options du compte
+                echo "<div>
+
+                        <a href='form_changement_mdp.php' class='option_compte'>Changer le mot de passe</a>
+                        <a href='confirm_deconnexion.php' class='option_compte'>Se déconnecter</a>
+                        <a style='text-decoration: underline;' class='option_compte' onclick='AlerteSuppressionCompte(\"$username\")'>Supprimer le compte</a>
+
+                    </div>";
             }
 
             // Si le nom de l'utilisateur n'existe pas
@@ -54,19 +63,13 @@
             }
         ?>
 
-        <div>
-
-            <a href="form_changement_mdp.php">Changer le mot de passe</a>
-            <a href="confirm_deconnexion.php">Se déconnecter</a>
-            <a id="lien_suppr_compte" href="confirm_suppr_compte.php">Supprimer le compte</a>
-
-        </div>
-
     </main>
 
     <footer>
         <p>&copy; Site web développé par Maxyme Bonvent.</p>
-    </footer>    
+    </footer>  
+    
+    <script src="../JS/alerte_suppr_compte.js"></script>
 
 </body>
 </html>
