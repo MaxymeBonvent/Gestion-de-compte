@@ -17,7 +17,7 @@
         <nav>
 
             <a href="accueil.php">Accueil</a>
-            <a href="form_connexion.php">Se connecter</a>
+            <a href="profile.php" style="background-color: dodgerblue; color: black; padding: 4px;">Profile</a>
 
         </nav>
 
@@ -27,11 +27,11 @@
 
         <h1>Formulaire de changement de mot de passe</h1>
 
-        <form action="changement_mdp.php">
+        <form method="POST" action="changement_mdp.php">
 
             <div>
-                <label for="nom">Nom</label>
-                <input type="text" name="nom" id="nom" placeholder="nom" oninput="Nom()">
+                <label for="username">Nom</label>
+                <input type="text" name="username" id="username" placeholder="nom" oninput="Nom()">
             </div>
 
             <div>

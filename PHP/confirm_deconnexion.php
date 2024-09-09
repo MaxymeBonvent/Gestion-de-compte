@@ -17,7 +17,7 @@
         <nav>
 
             <a href="accueil.php" >Accueil</a>
-            <a href="profile.php" style="background-color: dodgerblue; color: black; padding: 4px;">Profile</a>
+            <a href="form_connexion.php" style="background-color: dodgerblue; color: black; padding: 4px;">Se connecter</a>
 
         </nav>
 

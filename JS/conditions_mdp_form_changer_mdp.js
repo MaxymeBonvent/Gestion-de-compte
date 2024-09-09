@@ -3,7 +3,7 @@ let invalide = "rgb(180, 0, 0)";
 let valide = "rgb(0, 160, 0)";
 
 // VARIABLE DU NOM
-let nom = document.getElementById("nom");
+let nom = document.getElementById("username");
 let nomValide = false;
 
 // VARIABLE DU MOT DE PASSE ACTUEL
