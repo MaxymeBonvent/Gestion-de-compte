@@ -55,8 +55,28 @@ div{
     margin: 10px 0;
 }
 
-.option_compte:hover{
+.option_compte:hover, input:hover{
     cursor: pointer;
+}
+
+table{
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+table, th, td, form{
+    border: 2px solid black;
+}
+
+input{
+    background-color: rgb(200, 200, 200);
+    border: transparent;
+}
+
+#champs_utilisateurs{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
 }
 
 /* VERSION TRÈS PETITE */
@@ -74,6 +94,14 @@ div{
 
     .option_compte{
         margin: 10px 0;
+    }
+
+    #champs_utilisateurs div{
+        width: 90%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 }
 
@@ -93,6 +121,14 @@ div{
     .option_compte{
         margin: 10px 0;
     }
+
+    #champs_utilisateurs div{
+        width: 90%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 /* VERSION MOYENNE */
@@ -101,7 +137,7 @@ div{
         width: 60%;
     }
 
-    main a, footer p{
+    main a, main p, caption, th, td, footer p{
         font-size: 20px;
     }
 
@@ -112,6 +148,14 @@ div{
         justify-content: space-around;
         align-items: center;
     }
+
+    #champs_utilisateurs div{
+        width: 90%;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 }
 
 /* VERSION GRANDE */
@@ -120,7 +164,7 @@ div{
         width: 60%;
     }
 
-    main a, footer p{
+    main a, main p, caption, th, td, footer p{
         font-size: 20px;
     }
 
@@ -129,6 +173,14 @@ div{
 
         display: flex;
         justify-content: space-around;
+        align-items: center;
+    }
+
+    #champs_utilisateurs div{
+        width: 90%;
+
+        display: flex;
+        justify-content: space-between;
         align-items: center;
     }
 }

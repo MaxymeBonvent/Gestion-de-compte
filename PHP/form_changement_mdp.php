@@ -31,17 +31,17 @@
 
             <div>
                 <label for="username">Nom</label>
-                <input type="text" name="username" id="username" placeholder="nom" oninput="Nom()">
+                <input type="text" name="username" id="username" placeholder="nom" autocomplete="off" oninput="Nom()">
             </div>
 
             <div>
                 <label for="mdp_actuel">Mot de passe actuel</label>
-                <input type="password" name="mdp_actuel" id="mdp_actuel" placeholder="************" oninput="mdpActuel()">
+                <input type="password" name="mdp_actuel" id="mdp_actuel" placeholder="************" autocomplete="off" oninput="mdpActuel()">
             </div>
 
             <div>
                 <label for="nouveau_mdp">Nouveau mot de passe</label>
-                <input type="password" name="nouveau_mdp" id="nouveau_mdp" placeholder="************" oninput="ConditionsNouveauMDP()">
+                <input type="password" name="nouveau_mdp" id="nouveau_mdp" placeholder="************" autocomplete="off" oninput="ConditionsNouveauMDP()">
             </div>
 
             <p>Votre nouveau mot de passe doit contenir au moins :</p>
@@ -55,8 +55,8 @@
             </ul>
 
             <div>
-                <label for="nouveau_mdp_rép">Répéter nouveau mdp</label>
-                <input type="password" name="nouveau_mdp_rép" id="nouveau_mdp_rép" placeholder="************" oninput="TestToutesConditions()">
+                <label for="nouveau_mdp_rep">Répéter nouveau mdp</label>
+                <input type="password" name="nouveau_mdp_rep" id="nouveau_mdp_rep" placeholder="************" autocomplete="off" oninput="TestToutesConditions()">
             </div>
 
             <p id="txt_compar_mdp">Les mots de passe sont identiques/différents</p>

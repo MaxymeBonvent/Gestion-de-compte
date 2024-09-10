@@ -26,9 +26,14 @@
     <main>
 
         <?php
+            // Début de session
+            session_start();
+            
+            // Affichage de toutes les erreurs
             error_reporting(E_ALL);
             ini_set('display_errors', 1);
             
+            // Message de confirmation du changement de MDP
             echo "<p>Votre mot de passe a bien été modifié.</p>";
         ?>
 

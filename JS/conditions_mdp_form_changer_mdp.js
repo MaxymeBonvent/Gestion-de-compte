@@ -14,7 +14,7 @@ let mdpActuelValide = false;
 let nouveau_mdp = document.getElementById("nouveau_mdp");
 
 // VARIABLES DU NOUVEAU MOT DE PASSE RÉPÉTÉ
-let nouveau_mdp_rép = document.getElementById("nouveau_mdp_rép");
+let nouveau_mdp_rép = document.getElementById("nouveau_mdp_rep");
 
 // CONDITIONS DU NOUVEAU MOT DE PASSE
 let txt_longueur = document.getElementById("txt_longueur");
