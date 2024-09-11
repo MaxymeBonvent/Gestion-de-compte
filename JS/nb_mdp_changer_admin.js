@@ -58,13 +58,8 @@ function CompteCasesCochées()
             // Ajouter des champs nom et nouveau mot de passe
             champs_utilisateurs.innerHTML += 
             `   <div>
-                    <label for='nom_${noms_utilisateurs[num].textContent.trim()}'>Utilisateur ${num+1}</label>
-                    <input name='nom_${noms_utilisateurs[num].textContent.trim()}' id='nom_${noms_utilisateurs[num].textContent.trim()}' type='text' value='${noms_utilisateurs[num].textContent.trim()}' autocomplete='off' required>
-                </div>
-                
-                <div>
                     <label for='mdp_${noms_utilisateurs[num].textContent.trim()}'>Nouveau MDP ${noms_utilisateurs[num].textContent.trim()}</label>
-                    <input name='mdp_${noms_utilisateurs[num].textContent.trim()}' id='mdp_${noms_utilisateurs[num].textContent.trim()}' type='password' placeholder='************' autocomplete='off' required>
+                    <input name='mdp_${noms_utilisateurs[num].textContent.trim()}' id='mdp_${noms_utilisateurs[num].textContent.trim()}' type='password' placeholder='************' minlength='12' maxlength='100' autocomplete='off' required>
                 </div>`;
         }
     }

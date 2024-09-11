@@ -96,8 +96,12 @@ input{
         margin: 10px 0;
     }
 
+    form{
+        width: 70%;
+    }
+
     #champs_utilisateurs div{
-        width: 90%;
+        width: 100%;
 
         display: flex;
         justify-content: space-between;
@@ -122,8 +126,12 @@ input{
         margin: 10px 0;
     }
 
+    form{
+        width: 70%;
+    }
+
     #champs_utilisateurs div{
-        width: 90%;
+        width: 100%;
 
         display: flex;
         justify-content: space-between;

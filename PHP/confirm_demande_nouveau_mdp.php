@@ -25,13 +25,8 @@
 
     <main>
 
-        <?php
-            error_reporting(E_ALL);
-            ini_set('display_errors', 1);
-            
-            echo "<p>Un mail vient d'être envoyé à un administrateur pour signaler votre oublie de mot de passe. <br> Un mail contenant votre nouveau mot de passe vous sera envoyé.</p>";
-        ?>
-
+        <p>Un mail vient d'être envoyé à un administrateur pour signaler votre oublie de mot de passe. <br> Un mail contenant votre nouveau mot de passe vous sera envoyé.</p>
+        
     </main>
 
     <footer>
