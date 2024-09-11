@@ -142,5 +142,5 @@
     }
 
     // STYLE DE LA PAGE
-    echo "</body>";
+    echo "</body></body>";
 ?>

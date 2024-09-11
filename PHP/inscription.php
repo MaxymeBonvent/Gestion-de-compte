@@ -252,5 +252,5 @@
     }
 
     // FIN DE PAGE
-    echo "</body>";
+    echo "</body></html>";
 ?>

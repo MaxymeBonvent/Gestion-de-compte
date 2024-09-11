@@ -162,5 +162,5 @@
         echo "</pre>";
         
     // FIN DE PAGE
-    echo "</html></body>";
+    echo "</body></html>";
 ?>
