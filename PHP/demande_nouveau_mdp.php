@@ -10,10 +10,30 @@
     include_once("connexion_db.php");
 
     // DÉBUT DE PAGE
-    echo "<!DOCTYPE html><html lang='fr'><body style='background-color: black;'>";
+    echo "<!DOCTYPE html>
+            <html lang='fr'>
+            <head>
 
-    // Début d'affichage
-    echo "<pre style='color : rgb(180, 180, 180); text-align: center; font-size: 20px;'>";
+                <meta charset='UTF-8'>
+                <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+                <title>Gestion de compte - Accueil</title>
+                <link rel='stylesheet' href='../CSS/confirm.css'>
+
+            </head>
+            
+            <body>
+                <header>
+                    <nav>
+                        <a href='accueil.php'>Accueil</a>
+                    </nav>
+
+                </header>
+
+                <main>";
+
+    // Début de texte
+    echo "<p>";
 
     // --- MISE EN PLACE DE PHPMAILER --- //
 
@@ -43,8 +63,8 @@
             $mail->Port = 587;
 
             // Nom et MDP de l'admin, qui s'envoit un mail à lui-même
-            $mail->Username = $auteur;
-            $mail->Password = "Sp@ceJourne8";
+            $mail->Username = $mail_auteur;
+            $mail->Password = "wnsvlakuwuymrsvz"; //MDP généré en cliquant sur l'icône de mon compte gmail dans ma boîte gmail -> Gérer votre compte Google -> barre de recherche -> "mot de passe" -> suggestion "Mots de passe des applications". Les espaces doivent être retirés.
 
             // Adresse et nom de l'auteur du mail, adresse du destinaire
             $mail->setFrom($mail_auteur, $auteur);
@@ -68,11 +88,8 @@
             // Si l'envoi du mail réussi
             else
             {
-            // Affichage d'un message de réussite
-            echo "Réussite de l'envoi du mail.";
-
-            // Fin du script
-            exit;  
+                // Affichage d'un message d'envoi pour l'utilisateur
+                echo "Un mail concernant l'oubli de votre mot de passe vient d'être envoyé à l'administrateur. Un mail contenant votre nouveau mot de passe vous sera envoyé sous peu."; 
             }
         }
 
@@ -206,9 +223,6 @@
                     // Si le nom et le mail du formulaire correspondent à ceux de la DB
                     if($username === $nom_db && $email === $mail_db)
                     {
-                        // Message d'existence
-                        echo "L'utilisateur existe.\n";
-
                         // --- VARIABLES ENVOYEUR ET RECEVEUR DE MAIL --- //
                         $auteur = "Teal Comet";
                         $mail_auteur = "teal.comett@gmail.com";
@@ -220,9 +234,6 @@
                         try
                         {
                             sendMail($auteur, $mail_auteur, $sujet, $message, $destinataire);
-
-                            // Fin du script
-                            exit; 
                         }
 
                         // Si l'envoi du mail échoue
@@ -230,9 +241,6 @@
                         {
                             // Afficher un message d'erreur
                             echo "Erreur lors de l'envoi du mail : " . $exc->getMessage();
-
-                            // Fin du script
-                            exit; 
                         }
                     }
 
@@ -240,18 +248,22 @@
                     else
                     {
                         // Message d'inexistence
-                        echo "Erreur : l'utilisateur n'existe pas."; 
-
-                        // Fin du script
-                        exit; 
+                        echo "Erreur : l'utilisateur n'existe pas.";  
                     }
                 }
             }
         }
     
-    // Fin d'affichage
-    echo "</pre>";
+    // Fin de texte
+    echo "</p>";
 
     // FIN DE PAGE
-    echo "</body></html>";
+    echo "</main>
+
+            <footer>
+                <p>&copy; Site web développé par Maxyme Bonvent.</p>
+            </footer>
+
+        </body>
+        </html>";
 ?>

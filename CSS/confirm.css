@@ -47,6 +47,11 @@ main{
     text-align: center;
 }
 
+pre{
+    font-size: 20px;
+    text-align: center; 
+}
+
 /* VERSION TRÈS PETITE */
 @media all and (max-width:344px){
     nav{

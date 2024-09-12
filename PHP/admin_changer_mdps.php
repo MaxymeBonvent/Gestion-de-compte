@@ -16,7 +16,30 @@
     include_once("connexion_db.php");
 
     // DÉBUT DE PAGE
-    echo "<!DOCTYPE html><html lang='fr'><body style='background-color: black;'>";
+    echo "<!DOCTYPE html>
+            <html lang='fr'>
+            <head>
+
+                <meta charset='UTF-8'>
+                <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+                <title>Gestion de compte - Accueil</title>
+                <link rel='stylesheet' href='../CSS/confirm.css'>
+
+            </head>
+            
+            <body>
+                <header>
+                    <nav>
+                        <a href='accueil.php'>Accueil</a>
+                    </nav>
+
+                </header>
+
+                <main>";
+
+    // Début de texte
+    echo "<p>";
 
         // --- ERREURS FORMULAIRE --- //
 
@@ -24,15 +47,11 @@
         if($_SERVER["REQUEST_METHOD"] !== "POST")
         {
             // Afficher un message d'erreur
-            echo "<pre style='color : $couleur_txt; text-align: center; font-size: 20px;'>Erreur : la méthode utilisé n'est pas POST.</pre>";
+            echo "Erreur : la méthode utilisé n'est pas POST.";
 
             // Fin du script
             exit;
         }
-
-        // Début d'affichage
-        echo "<pre style='color : $couleur_txt; text-align: center; font-size: 20px;'>";
-
             // --- PRÉPARATION DE LA REQUÊTE --- //
 
             // Requête de changement de mdp
@@ -117,9 +136,6 @@
                             // On obtient le nouveau mdp qui est la valeur dans la pair
                             $nouveau_mdp = trim($value);
 
-                            // Affichage de la pair
-                            echo "Nom : " . $utilisateur . ", nouveau mdp : " . $nouveau_mdp . ".\n";
-
                             // Cryptage du nouveau mdp
                             $nouveau_mdp_crypt = password_hash($nouveau_mdp, PASSWORD_DEFAULT);
 
@@ -158,9 +174,16 @@
             // Message de réussite de toutes les transactions
             echo "Toutes les transactions ont réussi.";
 
-        // Fin d'affichage
-        echo "</pre>";
-        
+        // Fin de texte
+    echo "</p>";
+
     // FIN DE PAGE
-    echo "</body></html>";
+    echo "</main>
+
+            <footer>
+                <p>&copy; Site web développé par Maxyme Bonvent.</p>
+            </footer>
+
+        </body>
+        </html>";
 ?>
